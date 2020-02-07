@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice Two</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <ul>
+            <li v-for="todo in todos">{{ todo }}</li>
+        </ul>
+
+        <input type="text" v-model="todo">
+
+        <button @click="todos.push(todo)">Add todo</button>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                todo: 'TODO...',
+                todos: [
+                    'First TODO',
+                    'Second TODO'
+                ]
+            }
+        })
+    </script>
+
+</body>
+</html>
